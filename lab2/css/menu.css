@@ -1,0 +1,80 @@
+.dishes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.dish {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 30px 40px;
+    border: 2px solid transparent;
+    border-radius: 35px;
+    background-color: white;
+    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+    cursor: pointer;
+}
+
+.dish:hover,
+.dish.selected {
+    border-color: tomato;
+}
+
+.dish img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 35px;
+}
+
+.dish p {
+    margin: 0;
+}
+
+.dish .dish-price {
+    margin-top: 16px;
+    font-size: 22px;
+}
+
+.dish .dish-name {
+    margin-bottom: 16px;
+    font-size: 20px;
+}
+
+.dish .dish-count {
+    margin-top: auto;
+    color: gray;
+}
+
+.dish button {
+    margin-top: 10px;
+    padding: 10px 30px;
+    border: 0;
+    border-radius: 10px;
+    background-color: #f1eee9;
+    font: inherit;
+    cursor: pointer;
+}
+
+.dish:hover button,
+.dish.selected button {
+    background-color: tomato;
+}
+
+@media (max-width: 800px) {
+    .dishes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .menu-section > h2 {
+        text-align: center;
+    }
+
+    .dishes {
+        grid-template-columns: 1fr;
+    }
+}

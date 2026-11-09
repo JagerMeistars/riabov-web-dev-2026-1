@@ -1,0 +1,116 @@
+.order-section > h2 {
+    margin-bottom: 36px;
+    text-align: center;
+}
+
+.order-form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 80px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.order-form h3 {
+    margin: 0 0 28px;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.form-field {
+    margin-bottom: 18px;
+}
+
+.form-field label {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    width: 100%;
+    padding: 9px;
+    border: 1px solid gray;
+    border-radius: 0;
+    background-color: white;
+    font: inherit;
+}
+
+.form-field textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.subscribe {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+    margin: 0 0 18px;
+}
+
+.order-form fieldset {
+    margin: 0 0 18px;
+    padding: 0;
+    border: 0;
+}
+
+.order-form fieldset label {
+    display: block;
+    margin-top: 6px;
+}
+
+.form-note {
+    display: block;
+    margin-top: 4px;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.form-buttons button {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid black;
+    background-color: white;
+    font: inherit;
+    cursor: pointer;
+}
+
+.form-buttons button:hover {
+    background-color: #f1eee9;
+}
+
+.chosen-category {
+    margin-bottom: 24px;
+}
+
+.chosen-category h4,
+.chosen-category p {
+    margin: 0;
+}
+
+#order-total {
+    margin-bottom: 36px;
+}
+
+#order-total h4,
+#total-price {
+    margin: 0;
+}
+
+@media (max-width: 800px) {
+    .order-form {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .order-form {
+        grid-template-columns: 1fr;
+    }
+}

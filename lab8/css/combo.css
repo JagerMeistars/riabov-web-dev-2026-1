@@ -1,0 +1,88 @@
+.combo-section > h2 {
+    text-align: center;
+}
+
+.combo-options {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 32px 20px;
+}
+
+.combo {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.combo-dish {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+}
+
+.combo-dish img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+}
+
+.combo-dish img:hover {
+    transform: translateY(-5px) scale(1.1);
+}
+
+.combo-dish p {
+    margin: 8px 0 0;
+}
+
+.combo-dish .dessert-note {
+    font-size: 12px;
+}
+
+.notification {
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    width: 460px;
+    max-width: calc(100% - 32px);
+    padding: 36px;
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    text-align: center;
+    font: inherit;
+}
+
+.notification::backdrop {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.notification button {
+    margin-top: 16px;
+    padding: 12px 36px;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    font: inherit;
+}
+
+.notification button:hover {
+    background-color: black;
+    color: white;
+}
+
+@media (max-width: 800px) {
+    .combo-options {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .combo-options {
+        grid-template-columns: 1fr;
+    }
+}
